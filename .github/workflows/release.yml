@@ -27,6 +27,6 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.meta.outputs.tag }}
-          name: Fokus für iOS ${{ steps.meta.outputs.tag }}
+          name: Fokus ${{ steps.meta.outputs.tag }}
           body_path: notes/${{ steps.meta.outputs.tag }}.md
           files: assets/${{ steps.meta.outputs.tag }}/*
