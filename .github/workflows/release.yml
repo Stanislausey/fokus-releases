@@ -1,0 +1,32 @@
+name: release
+
+# Veroeffentlicht die Dateien aus assets/<tag>/ als GitHub-Release.
+# Der Tag wird hier vom Workflow erzeugt (RELEASE_TAG-Datei), die Notes
+# kommen aus notes/<tag>.md. Ausgeloest durch jeden Push, der assets/
+# oder RELEASE_TAG aendert.
+
+on:
+  push:
+    branches: ['**']
+    paths: ['assets/**', 'RELEASE_TAG', '.github/workflows/release.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tag bestimmen
+        id: meta
+        run: echo "tag=$(tr -d ' \n' < RELEASE_TAG)" >> "$GITHUB_OUTPUT"
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: Fokus für iOS ${{ steps.meta.outputs.tag }}
+          body_path: notes/${{ steps.meta.outputs.tag }}.md
+          files: assets/${{ steps.meta.outputs.tag }}/*
