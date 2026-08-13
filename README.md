@@ -13,10 +13,10 @@ Die neueste Version liegt unter **[Releases](../../releases/latest)**.
 
 | Datei | Für wen |
 |-------|---------|
-| **Fokus-Setup-x64.exe** | normale Windows-PCs (Intel oder AMD, 64 Bit) |
-| **Fokus-Setup-arm64.exe** | Windows auf ARM (z. B. Surface Pro X) |
+| **Fokus-Setup-x64.exe** | Windows-PCs mit Intel oder AMD (64 Bit) |
 
-Im Zweifel ist es die **x64**-Datei.
+Für Windows auf ARM gibt es letztmalig bei [v1.0.0](../../releases/tag/v1.0.0)
+einen Installer; neuere Versionen erscheinen nur noch für x64.
 
 ## Installation in drei Schritten
 
@@ -40,7 +40,8 @@ teuer signiert ist. Auf **„Weitere Informationen"** klicken, dann auf
 ## Prüfsumme prüfen (optional)
 
 Wer sichergehen will, dass die Datei unverändert ist, vergleicht die Prüfsumme
-in PowerShell mit dem Wert aus den [Release-Notes](../../releases/latest):
+in PowerShell mit dem Wert aus der Datei `SHA256SUMS` beim
+[Release](../../releases/latest):
 
 ```powershell
 Get-FileHash .\Fokus-Setup-x64.exe -Algorithm SHA256
