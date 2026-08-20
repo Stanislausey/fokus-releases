@@ -1,6 +1,6 @@
-# Fokus für Windows
+# Fokus
 
-Fokus ist ein einfacher Seitenblocker für Windows 11. Gesperrte Domains landen
+Fokus ist ein einfacher Seitenblocker für Windows 11 und iOS. Gesperrte Domains landen
 in der hosts-Datei, das Entsperren ist bewusst umständlich: nach dem Blocken
 bleiben nur 60 Sekunden zum Rückgängigmachen, danach ist die Sperre dauerhaft.
 Ein Werkzeug zur Selbstbindung gegen Ablenkung.
@@ -54,6 +54,17 @@ gesetzten Sperren in `C:\Windows\System32\drivers\etc\hosts` bleiben
 **absichtlich bestehen**, auch nach der Deinstallation. Genau das ist der Sinn
 der App: der Selbstbindungs-Effekt steckt in der hosts-Datei, nicht im Programm.
 Wer die Sperren doch entfernen will, bearbeitet die hosts-Datei von Hand.
+
+## iOS (iPhone)
+
+Unter [Releases](../../releases/latest) liegt zusätzlich
+**Fokus-x.y.z-unsigned.ipa** – die iOS-Version. Der Filter läuft dort als
+Netzwerk-Extension systemweit (alle Browser und Apps) und wird über ein
+Konfigurationsprofil verankert, das App und Filter ohne Passwort unlöschbar
+macht. Die IPA ist unsigniert: iOS installiert sie nur nach Signierung mit
+einem eigenen Apple-Developer-Account (Details in den Release-Notes).
+Zusätzlich nötig: beaufsichtigtes iPhone (Apple Configurator) und das selbst
+erzeugte Konfigurationsprofil.
 
 ## Hinweise
 
