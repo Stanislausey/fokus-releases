@@ -57,8 +57,9 @@ Wer die Sperren doch entfernen will, bearbeitet die hosts-Datei von Hand.
 
 ## iOS (iPhone)
 
-Unter [Releases](../../releases/latest) liegt zusätzlich
-**Fokus-x.y.z-unsigned.ipa** – die iOS-Version. Der Filter läuft dort als
+Unter [Releases](../../releases) liegt zusätzlich
+**Fokus-x.y.z-unsigned.ipa** – die iOS-Version (aktuell im Release v1.0.0;
+die iOS-App hat eigene Versionsstände, Windows-Fixes ändern sie nicht). Der Filter läuft dort als
 Netzwerk-Extension systemweit (alle Browser und Apps) und wird über ein
 Konfigurationsprofil verankert, das App und Filter ohne Passwort unlöschbar
 macht. Die IPA ist unsigniert: iOS installiert sie nur nach Signierung mit
